@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Home from './page/Home';
+import styled from '@emotion/styled';
+import { Box } from '@mui/material';
 
-function App() {
+
+const RootContainer = styled(Box)({
+  "& .MuiTypography-root, .MuiButtonBase-root": {
+    height: '100%',
+    fontFamily: 'Inter',
+    textTransform:"none"
+  },
+})
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <RootContainer>
+      <Home />
+    </RootContainer>
+  )
 }
 
-export default App;
+export default App
